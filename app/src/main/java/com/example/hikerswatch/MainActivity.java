@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
     public void refresh(View view) {
         // button for refreshing location
 
-        Toast.makeText(getApplicationContext(), "Updating Your Location...", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Updating your location...", Toast.LENGTH_SHORT).show();
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             Location lastKnownLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
@@ -138,9 +138,10 @@ public class MainActivity extends AppCompatActivity {
                 address += (city == null ? "" : city + " ");
                 address += (state == null ? "" : state + " ");
                 address += (street == null ? "" : street + " ");
-                address += (country == null ? "" : "\n\n\nYou are in " + country + " !!!");
 
-                addressText.setText("Address:\n\n" + address);
+                country = (country == null ? "" : country);
+
+                addressText.setText("Address: " + country + "\n" + address);
 
             } else {
                 addressText.setText("Address: -");
