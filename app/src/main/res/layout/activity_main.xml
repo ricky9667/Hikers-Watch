@@ -91,4 +91,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/altitudeTextView" />
 
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="120sp"
+        android:layout_height="60sp"
+        android:layout_marginBottom="32dp"
+        android:onClick="refresh"
+        android:text="Refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
